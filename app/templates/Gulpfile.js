@@ -1,0 +1,51 @@
+'use strict';
+
+var gulp = require('gulp'),
+    browserSync = require('browser-sync');
+
+
+//////////////////////////////
+// ESLint Tasks
+//////////////////////////////
+require('./tasks/eslint')(gulp);
+
+
+//////////////////////////////
+// Sass Tasks
+//////////////////////////////
+require('./tasks/sass')(gulp);
+
+
+//////////////////////////////
+// HTML Tasks
+//////////////////////////////
+require('./tasks/html')(gulp);
+
+
+//////////////////////////////
+// Images Tasks
+//////////////////////////////
+require('./tasks/images')(gulp);
+
+
+//////////////////////////////
+// Fonts Tasks
+//////////////////////////////
+require('./tasks/fonts')(gulp);
+
+
+//////////////////////////////
+// BrowserSync Task
+//////////////////////////////
+gulp.task('browserSync', function () {
+  return browserSync({
+    server: {
+      baseDir: './'
+    }
+  });
+});
+
+//////////////////////////////
+// Watch Task
+//////////////////////////////
+gulp.task('default', ['html:watch', 'images:watch', 'fonts:watch', 'eslint:watch', 'sass:watch', 'browserSync']);
