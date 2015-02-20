@@ -14,10 +14,11 @@ var NorthGenerator = yeoman.generators.Base.extend({
   },
 
   prompting: function () {
-    var done = this.async();
+    var done = this.async(),
+        say = 'Let\'s build a ' + chalk.red('Quick Prototype');
 
     // have North greet the user
-    this.log(yosay('Let\'s Build a Quick Prototype!'));
+    this.log(yosay(say));
 
     var prompts = [{
       type: 'string',
