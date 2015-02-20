@@ -27,7 +27,9 @@ module.exports = function (gulp, SassPaths) {
   //////////////////////////////
   var SassTask = function (path) {
     return gulp.src(SassPaths)
-      .pipe(sass())
+      .pipe(sass({
+        errLogToConsole: true
+      }))
       .pipe(gulp.dest('css'))
       .pipe(reload({stream: true}));
   }
