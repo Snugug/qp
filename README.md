@@ -1,4 +1,4 @@
-# Generator Quick Prototype [![NPM version](https://badge.fury.io/js/generator-qp.png)](http://badge.fury.io/js/generator-qp)
+# Generator Quick Prototype [![Circle CI](https://circleci.com/gh/Snugug/qp.svg?style=svg)](https://circleci.com/gh/Snugug/qp) [![NPM version](https://badge.fury.io/js/generator-qp.png)](http://badge.fury.io/js/generator-qp)
 
 > A [Yeoman](http://yeoman.io) generator for building quick prototypes
 
